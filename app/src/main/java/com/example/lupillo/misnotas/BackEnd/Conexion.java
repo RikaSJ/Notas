@@ -4,8 +4,8 @@ import android.database.sqlite.*;
 
 public class Conexion extends SQLiteOpenHelper {
     //La clase tiene que heredar de SQLiteOpenHelper
-    public static final int DATABASE_VERSION = 3;
-    public static final String DATABASE_NAME="MisNotas2.db";
+    public static final int DATABASE_VERSION = 1;
+    public static final String DATABASE_NAME="intento.db";
 
     //Columnas de la tabla NOTA
     public static final String [] COLUMNAS_NOTA = {
@@ -19,11 +19,11 @@ public class Conexion extends SQLiteOpenHelper {
             "FechaResistro"
     };
     //Tabla NOTA
-    public static final String [] TABLES_DB = {"NOTA"};
+    public static final String [] TABLES_DB = {"lol"};
 
     //Scrip para crear la tabla en la base de datos
     public static final String SQL_CREAR=
-            "create table NOTA (" +
+            "create table lol (" +
                     "Titulo" + "text not null," +
                     "Descripcion" + "text not null," +
                     "ArchivoMultimedia" + "text not null," +

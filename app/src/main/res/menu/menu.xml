@@ -5,6 +5,6 @@
         android:icon="@android:drawable/ic_menu_add"
         android:title="agregar"
         android:id="@+id/agregar"
-        app:showAsAction="never"
+        app:showAsAction="always"
         />
 </menu>

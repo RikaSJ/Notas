@@ -31,6 +31,9 @@ public class AgregarNota extends AppCompatActivity implements AdapterView.OnItem
     EditText txtTitulo;
     EditText txtDescripcion;
     EditText txtFecha;
+    EditText txtMinutos;
+    EditText txtHoras;
+    EditText txtRecordar;
     Spinner spinTipo;
     Button btnFecha;
     DatePickerDialog datePickerDialog;
@@ -58,6 +61,9 @@ public class AgregarNota extends AppCompatActivity implements AdapterView.OnItem
         spinTipo=findViewById(R.id.spnTipo);
         txtFecha=findViewById(R.id.txtFecha);
         btnFecha=findViewById(R.id.btnFecha);
+        txtMinutos=findViewById(R.id.txtMinutos);
+        txtHoras=findViewById(R.id.txtHoras);
+        txtRecordar=findViewById(R.id.txtRecordar);
         btnFecha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -123,18 +129,26 @@ public class AgregarNota extends AppCompatActivity implements AdapterView.OnItem
     public void btnAgregar_click(View v){
         NotaDAO ado =new NotaDAO(getApplicationContext());
         Toast.makeText(this,s, Toast.LENGTH_LONG).show();
-        /*long result = ado.Agregar(
+        long result = ado.Agregar(
                 new Nota(txtTitulo.getText().toString(),
                         txtDescripcion.getText().toString(),
-
+                        "x",
+                        spinTipo.getSelectedItem().toString(),
+                        txtFecha.getText().toString()+" "+txtMinutos.getText().toString()+":"+txtHoras.getText().toString(),
+                        txtRecordar.getText().toString(),
+                        "si",
+                        "hoy"
                 )
         );
         if (result>0){
             Toast.makeText(this, "Adición exitosa",Toast.LENGTH_LONG).show();
-        }*/
+            //finish() se utiliza para terminar el intent del MainActivity.java
+            finish();
+        }else{
+            Toast.makeText(this,"No se agrego la nota", Toast.LENGTH_LONG).show();
+        }
 
-        //finish() se utiliza para terminar el intent del MainActivity.java
-        finish();
+
 
     }
 

@@ -158,8 +158,8 @@
 
     <Spinner
         android:id="@+id/spnTipo"
-        android:layout_width="195dp"
-        android:layout_height="41dp"
+        android:layout_width="193dp"
+        android:layout_height="52dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -184,8 +184,11 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
+        android:editable="false"
         android:ems="10"
+        android:enabled="false"
         android:inputType="textPersonName"
+        android:textColor="@color/colorPrimaryDark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.832"
@@ -222,7 +225,7 @@
         app:layout_constraintVertical_bias="0.816" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/txtRecordar"
         android:layout_width="148dp"
         android:layout_height="51dp"
         android:layout_marginStart="8dp"
@@ -241,7 +244,7 @@
         app:layout_constraintVertical_bias="0.648" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/txtHoras"
         android:layout_width="47dp"
         android:layout_height="38dp"
         android:layout_marginStart="68dp"
@@ -253,7 +256,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/txtMinutos"
         android:layout_width="47dp"
         android:layout_height="38dp"
         android:layout_marginStart="119dp"

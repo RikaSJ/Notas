@@ -4,9 +4,12 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import com.example.lupillo.misnotas.BackEnd.Conexion;
 import com.example.lupillo.misnotas.BackEnd.Nota;
+
+import java.io.Console;
 
 public class NotaDAO {
     //Adaptador para la base de datos
@@ -33,6 +36,8 @@ public class NotaDAO {
 
         //insertamos
         //si inserta devuelve el id insertado si no devuelve -1
+
+
         return adaptador.insert(Conexion.TABLES_DB[0],null,content);
 
     }
